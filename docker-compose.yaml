@@ -1,5 +1,5 @@
 services:
-  capcut-mate:
+  linux:
     image: gogoshine/linux:latest
     volumes:
       - ./workspace:/root/workspace
