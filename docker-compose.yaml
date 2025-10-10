@@ -2,6 +2,7 @@ services:
   linux:
     image: gogoshine/linux:latest
     volumes:
+      - ./share:/app/www/share
       - ./workspace:/root/workspace
     mem_limit: 4G     # 内存限制
     memswap_limit: 4G # 总内存（物理内存 + Swap）限制
