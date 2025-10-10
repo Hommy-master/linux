@@ -1,6 +1,8 @@
 services:
   linux:
     image: gogoshine/linux:latest
+    ports:
+      - "80:80"  # 将主机的 80 端口映射到容器内部的 80 端口
     volumes:
       - ./share:/app/www/share
       - ./workspace:/root/workspace
