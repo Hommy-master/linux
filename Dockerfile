@@ -3,12 +3,13 @@ FROM python:3.11
 ENV HOME="/root" \
     DEBIAN_FRONTEND=noninteractive
 
-# 更新包列表并安装工具和nginx，同时清理缓存以减小镜像体积
+# 更新包列表并安装工具、nginx和pgloader，同时清理缓存以减小镜像体积
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     wget \
     curl \
-    nginx && \
+    nginx \
+    pgloader && \
     rm -rf /var/lib/apt/lists/*
 
 # 创建nginx默认站点目录
